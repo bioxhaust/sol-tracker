@@ -1,0 +1,14 @@
+.env
+.env
+.env.*
+!.env.example
+*.pem
+*keypair*
+logs/
+data/
+*.db
+*.jsonl
+state.json
+__pycache__/
+.venv/
+target/

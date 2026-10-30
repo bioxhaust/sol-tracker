@@ -1,0 +1,16 @@
+# Endpoints default to public mainnet. Set HELIUS_API_KEY in the environment to use Helius
+# (never put keys in this file). RPC_HTTP / RPC_WS env vars override too.
+rpc_http = "https://api.mainnet-beta.solana.com"
+rpc_ws = "wss://api.mainnet-beta.solana.com"
+commitment = "confirmed"
+min_liquidity_usd = 10000
+# meteora_dlmm is off: no low-traffic creation account (392 preset accounts) and the
+# full program feed is ~9 MB/min. Add it back here if you accept that bandwidth.
+enabled_dexes = ["raydium_amm_v4", "raydium_cpmm", "orca_whirlpool",
+                 "meteora_damm_v1", "meteora_damm_v2", "pumpswap"]
+pool_account_streams = true
+log_all = false
+recheck_delay_s = 90
+max_concurrent_fetches = 4
+output_file = "logs/pools.jsonl"
+log_level = "INFO"
